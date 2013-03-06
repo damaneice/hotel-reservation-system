@@ -3,10 +3,12 @@ require_relative 'customer_factory'
 
 class Hotel
 	attr_reader :rating
+	attr_reader :name
 
 	def initialize (information)
 		@information = information
 		@rating = information[:rating]
+		@name = information[:name]
    	end	
 
    	def total customerType, dates
