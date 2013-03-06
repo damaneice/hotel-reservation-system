@@ -2,10 +2,11 @@ require 'Date'
 require_relative 'customer_factory'
 
 class Hotel
-	include 
+	attr_reader :rating
 
 	def initialize (information)
 		@information = information
+		@rating = information[:rating]
    	end	
 
    	def total customerType, dates
