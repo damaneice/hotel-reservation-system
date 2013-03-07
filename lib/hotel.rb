@@ -14,7 +14,7 @@ class Hotel
    	def total customerType, dates
    		amountTotal = 0
    		dates.each do |date|
-   			amountTotal = amountTotal + price(customerType, date)
+   			amountTotal = amountTotal + price(customerType, Date.parse(date))
 		end
 		return amountTotal
    	end
