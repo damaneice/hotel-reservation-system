@@ -1,17 +1,11 @@
 require_relative 'hotel_finder'
 require_relative 'hotel'
 
-contents = File.open('input.txt')
-contents.each do |line| 
-	parsedInput = []
-	line.split(/[,:]/).each do |s|
-		parsedInput.push(s.strip)
-	end
+File.open('input.txt').each do |line| 
+	parsedInput = line.split(/[,:]/).map {|s| s.strip}
 
 	customerType = parsedInput.first().downcase.to_sym
 	dates = parsedInput.slice(1,parsedInput.length)
-
-
 
 	lakewood = Hotel.new({:name => 'lakewood', :rating => 3, :weekedayPrice => 110, :weekendPrice => 90, :rewardsWeekdayPrice => 80, :rewardsWeekendPrice => 80 })
 	bridgewood = Hotel.new({:name => 'bridgewood', :rating => 4, :weekedayPrice => 160, :weekendPrice => 60, :rewardsWeekdayPrice => 110, :rewardsWeekendPrice => 50 })
