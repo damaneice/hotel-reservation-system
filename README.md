@@ -1,5 +1,3 @@
-# Hotel::Room::Reservation
-
 TODO: Write a gem description
 
 ## Installation
