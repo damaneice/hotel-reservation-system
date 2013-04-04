@@ -2,6 +2,7 @@ TODO: Write a gem description
 
 ## Installation
 
+blah blah blah
 Add this line to your application's Gemfile:
 
     gem 'hotel-room-reservation'
